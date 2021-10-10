@@ -13,7 +13,6 @@ class Issue(GithubObject):
         ret = []
         for data in response:
             if "pull_request" in data.keys():
-                print(data)
                 pass
             else:
                 ret.append(data)
