@@ -22,5 +22,9 @@ class TestPython_github(unittest.TestCase):
         """Test something."""
         self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="closed")
         self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="open")
+
+    def test_get_workflow(self):
+        self.github.workflow.get("OUXT-Polaris/ouxt_common")
+
 if __name__ == "__main__":
     unittest.main()
