@@ -10,7 +10,9 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = [ ]
+requirements = [
+    "requests",
+]
 
 test_requirements = [ ]
 
@@ -30,9 +32,6 @@ setup(
     ],
     description="simple python client library for github rest API",
     entry_points={
-        'console_scripts': [
-            'python_github=python_github.cli:main',
-        ],
     },
     install_requires=requirements,
     license="Apache Software License 2.0",

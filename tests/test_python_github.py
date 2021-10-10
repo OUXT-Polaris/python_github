@@ -5,7 +5,7 @@
 
 import unittest
 
-from python_github import python_github
+from python_github.python_github import Github
 
 
 class TestPython_github(unittest.TestCase):
@@ -13,9 +13,14 @@ class TestPython_github(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
+        self.github = Github()
 
     def tearDown(self):
         """Tear down test fixtures, if any."""
 
-    def test_000_something(self):
+    def test_get_pull_request(self):
         """Test something."""
+        self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="closed")
+        self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="open")
+if __name__ == "__main__":
+    unittest.main()
