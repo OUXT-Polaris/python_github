@@ -29,6 +29,9 @@ class TestPython_github(unittest.TestCase):
     def test_licence(self):
         self.assertEqual(self.github.license.get("OUXT-Polaris/dynamixel_hardware_interface"), "Apache License 2.0")
         self.assertEqual(self.github.license.get("OUXT-Polaris/ouxt_common"), None)
+    
+    def test_issue(self):
+        self.github.issue.get("OUXT-Polaris/ouxt_automation")
 
 if __name__ == "__main__":
     unittest.main()
