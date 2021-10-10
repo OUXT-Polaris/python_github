@@ -25,6 +25,8 @@ class TestPython_github(unittest.TestCase):
 
     def test_get_workflow(self):
         self.github.workflow.get("OUXT-Polaris/ouxt_common")
+        self.assertEqual(self.github.workflow.get_id("OUXT-Polaris/ouxt_common", "NONE"), None)
+        self.assertEqual(self.github.workflow.get_id("OUXT-Polaris/ouxt_common", "BuildTest"), 12898616)
 
 if __name__ == "__main__":
     unittest.main()
