@@ -20,11 +20,15 @@ class TestPython_github(unittest.TestCase):
 
     def test_get_pull_request(self):
         """Test something."""
-        self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="closed")
-        self.github.pull_request.get("OUXT-Polaris/ouxt_common", state="open")
+        self.github.pull_request.get("OUXT-Polaris/dynamixel_hardware_interface", state="closed")
+        self.github.pull_request.get("OUXT-Polaris/dynamixel_hardware_interface", state="open")
 
     def test_get_workflow(self):
-        self.github.workflow.get("OUXT-Polaris/ouxt_common")
+        self.github.workflow.get("OUXT-Polaris/dynamixel_hardware_interface")
+
+    def test_licence(self):
+        self.assertEqual(self.github.license.get("OUXT-Polaris/dynamixel_hardware_interface"), "Apache License 2.0")
+        self.assertEqual(self.github.license.get("OUXT-Polaris/ouxt_common"), None)
 
 if __name__ == "__main__":
     unittest.main()
