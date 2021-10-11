@@ -17,7 +17,7 @@ requirements = [
 test_requirements = [ ]
 
 setup(
-    author="python_github",
+    author="Masaya Kataoka",
     author_email='ms.kataoka@gmail.com',
     python_requires='>=3.6',
     classifiers=[
@@ -38,7 +38,7 @@ setup(
     long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='python_github',
-    name='python_github',
+    name='python_github_api',
     packages=find_packages(include=['python_github', 'python_github.*']),
     test_suite='tests',
     tests_require=test_requirements,
