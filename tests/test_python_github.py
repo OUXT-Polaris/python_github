@@ -19,16 +19,15 @@ class TestPython_github(unittest.TestCase):
         """Tear down test fixtures, if any."""
 
     def test_get_pull_request(self):
-        """Test something."""
         self.github.pull_request.get("OUXT-Polaris/dynamixel_hardware_interface", state="closed")
         self.github.pull_request.get("OUXT-Polaris/dynamixel_hardware_interface", state="open")
 
     def test_get_workflow(self):
         self.github.workflow.get("OUXT-Polaris/dynamixel_hardware_interface")
 
-    def test_licence(self):
+    def test_license(self):
         self.assertEqual(self.github.license.get("OUXT-Polaris/dynamixel_hardware_interface"), "Apache License 2.0")
-        self.assertEqual(self.github.license.get("OUXT-Polaris/ouxt_common"), None)
+        self.assertEqual(self.github.license.get("OUXT-Polaris/ouxt_common"), "Apache License 2.0")
     
     def test_issue(self):
         self.github.issue.get("OUXT-Polaris/ouxt_automation")
