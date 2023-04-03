@@ -6,7 +6,7 @@ from python_github.license import License
 import os
 
 
-class Github():
+class Github:
     def __init__(self):
         token = os.environ["GITHUB_TOKEN"]
         self.workflow = Workflow(token)

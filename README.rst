@@ -22,6 +22,15 @@ simple python client library for github rest API
 * Free software: Apache Software License 2.0
 * Documentation: https://python-github.readthedocs.io.
 
+Setup
+--------
+* Install poetry
+
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python3 - --version 1.1.7
+
+* Install package
+
+poetry install .
 
 Features
 --------
