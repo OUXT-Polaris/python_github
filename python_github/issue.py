@@ -1,8 +1,10 @@
 from python_github.github_object import GithubObject
 
+
 class Issue(GithubObject):
     def __init__(self, token) -> None:
         super().__init__(token)
+
     def get(self, repository, state="open"):
         url = self.base_url + "/repos/" + repository + "/issues"
         if state == "closed":
