@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python_github"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python wrapper for Github API"
 authors = ["Masaya Kataoka <ms.kataoka@gmail.com>"]
 license = "Apache 2.0"
