@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "python_github"
+version = "0.1.0"
+description = "Python wrapper for Github API"
+authors = ["Masaya Kataoka <ms.kataoka@gmail.com>"]
+license = "Apache 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "*"
+unittest = "*"
+pyyaml = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-mock = "^3.6.0"
+pytest-cov = "^2.11.1"
+lark = "*"
+black = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
