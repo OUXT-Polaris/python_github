@@ -32,7 +32,7 @@ jobs:
       run: |
         poetry run pytest
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GITHUB_TOKEN: ${{ secrets.WAMV_TAN_BOT_SECRET }}
     - name: Lint with black
       run: |
         poetry run black . --check
